@@ -1,0 +1,71 @@
+* {
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#container {
+  margin-left: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 20rem;
+  border: black solid 2px;
+  border-radius: 10px;
+  height: 32rem;
+}
+.start_back {
+  background-image: url("./img/start.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sunny {
+  background-image: url("./img/sunny.jpg");
+  /* background-position: center;
+  background-repeat: no-repeat; */
+}
+.light_cloulds {
+  background-image: url("./img/light_clouds.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.heavy_clouds {
+  background-image: url("./img/heavy_clouds.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.rain {
+  background-image: url("./img/rain.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hail {
+  background-image: url("./img/hail.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.snow {
+  background-image: url("./img/snow.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.storm {
+  background-image: url("./img/storm.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+img {
+  max-width: 150px;
+}
+#cityRequest {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 3px;
+  border-radius: 5px;
+  max-width: 7rem;
+}
+
+.wetemp {
+  display: flex;
+  flex-flow: row nowrap;
+}
