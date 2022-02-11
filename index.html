@@ -12,16 +12,22 @@
     <title>WeatherApp</title>
   </head>
   <body>
+    <p>new york</p>
+    <p>barcelona</p>
     <div id="container" class="start_back">
       <div>
-        <input type="text" id="cityRequest" value="" />
+        <input type="text" placeholder="City Name" id="cityRequest" value="" />
         <button class="btn" onclick="getCity()">
-          <i class="fas fa-search"></i>
+          <i class="fa-solid fa-sun searchIco"></i>
+          <!-- <i class="fas fa-search"></i> -->
         </button>
       </div>
+      <p class="cityName"></p>
       <div class="wetemp">
         <p class="result"></p>
-        <p class="temperatura"></p>
+        <p class="temperatura"></p>        
+        <p class="windDir"></p>
+        <p class="windSp"></p>
       </div>
 
       <img class="iconPng" src="" />
