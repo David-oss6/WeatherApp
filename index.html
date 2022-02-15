@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Source+Serif+4&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -12,19 +15,26 @@
     <title>WeatherApp</title>
   </head>
   <body>
+    <p>new york</p>
+    <p>barcelona</p>
     <div id="container" class="start_back">
       <div>
-        <input type="text" id="cityRequest" value="" />
+        <input type="text" placeholder="City Name" id="cityRequest" value="" />
         <button class="btn" onclick="getCity()">
-          <i class="fas fa-search"></i>
+          <i class="fa-solid fa-sun searchIco"></i>
+          <!-- <i class="fas fa-search"></i> -->
         </button>
       </div>
+      <p class="cityName"></p>
       <div class="wetemp">
-        <p class="result"></p>
-        <p class="temperatura"></p>
+        <div class="weatherStatus" ><p class="result"></p><img class="iconPng" src="" /></div>
+       <div class="temps"><p class="temperatura"></p><div clas="minMaxTemp"
+         ><p class="maxTemp"></p><p class="minTemp"></p> </div> </div>      
+        <p class="windDir"></p>
+        <p class="windSp"></p>
       </div>
 
-      <img class="iconPng" src="" />
+      
     </div>
     <script src="app.js"></script>
   </body>
