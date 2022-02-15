@@ -13,6 +13,8 @@ let back_img = document.querySelector("#container");
 let city_name = document.querySelector(".cityName");
 let windDir = document.querySelector('.windDir')
 let windSp = document.querySelector('.windSp')
+let maxTemp = document.querySelector('.maxTemp')
+let minTemp = document.querySelector('.minTemp')
 
 const getCity = async () => {
   let ciudad = document.getElementById("cityRequest").value;
@@ -28,12 +30,14 @@ const getCity = async () => {
     console.log("getCity", data[0]);
     res.innerHTML = data[0].weather_state_name;
     let temperatura = Math.floor(data[0].the_temp);
-    temp.innerHTML = ` ${temperatura}ºC`;
+    temp.innerHTML = `now ${temperatura}ºC`;
+    maxTemp.innerHTML = `max ${Math.floor(data[0].max_temp)}ºC`
+    minTemp.innerHTML = `min ${Math.floor(data[0].min_temp)}ºC`
     let ico = data[0].weather_state_abbr;
     windDir.innerHTML ="Wind direction: " + data[0].wind_direction_compass 
     windSp.innerHTML="Wind speed: "+ Math.floor(data[0].wind_speed)+"nots"
 
-    // icono.src = `https://www.metaweather.com/static/img/weather/${ico}.svg`;
+    icono.src = `https://www.metaweather.com/static/img/weather/${ico}.svg`;
 
     back_img.classList.remove(myClass);
     if (ico === "sn") {
@@ -94,14 +98,15 @@ let whiteSpace=spaces(ciudad);
     temp.innerHTML = "";
     icono.src = "";
     windDir.innerHTML=""
-windSp.innerHTML=""
+    windSp.innerHTML=""
+    maxTemp.innerHTML = ""
+    minTemp.innerHTML = ""
   }
   ciudad.value = "";
 };
 
 document.addEventListener("keyup", function (e) {
-  city = document.getElementById("cityRequest").value;
-  console.log(city);
+  city = document.getElementById("cityRequest").value;  
   if (e.keyCode === 13) {
     e.preventDefault();
     document.querySelector(".btn").click();

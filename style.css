@@ -1,6 +1,14 @@
 * {
-  font-family: sans-serif;
-  font-size: 1rem;
+ font-family: 'Poppins', sans-serif;
+ font-family: 'Source Serif 4', sans-serif;  
+  font-size: 1em;
+  font-weight: bold;
+}
+body{
+  background-image: url('./img/holding.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 #container {
   margin-left: 35%;
@@ -8,16 +16,16 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: nowrap;
-  max-width: 20rem;
-  border: black solid 2px;
+  max-width: 35vh;
+  border: black solid 4px;
   border-radius: 10px;
-  height: 32rem;
+  height: 62vh;
 }
 .btn{
   border: none;
   background-color: none;
   border-radius: 50%;
-  background-color: lightskyblue;     
+  background-color: hsl(203, 92%, 75%, 0.1);     
 }
 .searchIco{
   color: #f1c938;
@@ -74,9 +82,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-img {
-  max-width: 150px;
-}
+
 #cityRequest {
   text-align: center;
   margin-top: 1.5rem;
@@ -84,8 +90,39 @@ img {
   border-radius: 5px;
   max-width: 7rem;
 }
+.cityName{
+  background-color: goldenrod;
+  width: 100%;
+  text-align: center;
+  padding: 5% 0% 5% 0;
+}
+.weatherStatus{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.weatherStatus img {
+  
+  max-width: 40px;
+}
 .wetemp {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  background-color: rgba(229, 238, 243, 0.4);
+  border-radius: 10px;
+  padding: 10%;
+  
+}
+.temps{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.minMaxTemp{
+  display: flex;
+  flex-flow: column nowrap;
+  
 }
